@@ -1,15 +1,22 @@
 <?php
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
+/*** 登録画面へのルート ***/
+Route::get('regist', 'RegistController@index');
+
+Route::post('regist', 'RegistController@post');
+
+//複数アクションがあるとき、indexアクションは上のように
+//URLを省略した形で書くことが一般的
+//(他のアクションはしたのようにURLにアクション名を含める)
+Route::get('hello', 'RegistController@hello');
+/*** 登録画面へのルート ***/
+
+/*** ログイン画面へのルート ***/
+
+Route::get('/login', function () {
+    return view('login');
+});
+
 
 Route::get('/', function () {
     return view('welcome');
