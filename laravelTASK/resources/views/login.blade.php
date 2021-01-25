@@ -1,46 +1,29 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>title</title>
-    <style>
-        body{
-            font-size: 16pt;
-            color: #999;
-            margin: 5px;
-        }
-        h1{
-            font-size: 50pt;
-            text-align: right;
-            color: #f6f6f6;
-        }
-        ul{
-            font-size: 12pt;
-        }
-        hr{
-            margin: 25pt 100pt;
-            border-top: 1px dashed #ddd;
-        }
-        .menutitle{
-            font-size: 14pt;
-            font-weight: bold;
-            margin: 0px;
-        }
-        .content{
-            margin: 10px;
-        }
-        
-    </style>
-</head>
-<body>
-    
-        <header>
+@extends('layouts.base')
 
-            <div class="nav">
-                <h1>Laravel</h1>
-                <a href={{ url('/regist')}}>regist</a>
-                <a href={{ url('/login')}}>login</a>
-        </header>
-</body>
-</html>
+@section('title', 'Laravel')
 
+@section('title', 'Laravel')
 
+@section('link', 'regist')
+
+@section('link', 'login')
+
+@section('contents')
+<div class="contents_title">
+    <h3>Login</h3>
+</div>
+<div class="items">
+<form class="form_items" action="index.html" method="post">
+    @csrf
+    <dl>
+        <dt>E-Mail Address</dt>
+        <dd><input type='email' name='email' class="email"></dd>
+        <dt>Password</dt>
+        <dd><input type='password' name='pass' class="pass"></dd>
+    </dl>
+    <p><input type="checkbox" name="remenber_me" value="1">Remenber Me</p>
+    <button type="submit" class="btn">Login</button>
+    <a href="#">Forgot Your Password?</a>
+    </form>       
+</div>
+@endsection

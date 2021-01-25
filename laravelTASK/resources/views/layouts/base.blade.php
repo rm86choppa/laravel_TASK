@@ -28,28 +28,7 @@
         </div>
     </header>
     <div class="contents">
-        <div class="contents_title">
-            <h3>@yield('title')</h3>
-        </div>
-        <form class="contact" action="index.html" method="post">
-            @csrf
-            <dl>
-                <?php $items = [
-                    ['dt'=>'Name', 'dd_type'=>'text', 'dd_name'=>'Name', 'dd_class'=>'Confirm'],
-                    ['dt'=>'E-Mail Address', 'dd_type'=>'email', 'dd_name'=>'email', 'dd_class'=>'email'],
-                    ['dt'=>'Password', 'dd_type'=>'password', 'dd_name'=>'pass', 'dd_class'=>'pass'],
-                    ['dt'=>'Confirm Password', 'dd_type'=>'password', 'dd_name'=>'confirm_password', 'dd_class'=>'confirm_password']
-                 ];
-                  foreach ($items as $settings) : ?>
-                    <dt><?php echo $settings['dt']; ?></dt>
-                    <dd><input type=<?php echo $settings['dd_type']; ?> name=<?php echo $settings['dd_name']; ?> 
-                            class="<?php echo $settings['dd_class']; ?>"></dd>
-                <?php endforeach?>
-            </dl>
-            <button type="submit" class="btn">@yield('button')</button>
-            </form>       
-        </div>
+        @yield('contents')
     </div>
-    
 </body>
 </html>
