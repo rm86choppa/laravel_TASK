@@ -1,9 +1,8 @@
 <?php
 
 /*** 登録画面へのルート ***/
-Route::get('regist', 'RegistController@index');
-
-Route::post('regist', 'RegistController@post');
+Route::resource('regist', 'RegistController', ['only' => ['index']]);
 
 /*** ログイン画面へのルート ***/
-Route::get('login', 'LoginController@login');
+Route::resource('login', 'LoginController', ['only' => ['index']]);
+?>
