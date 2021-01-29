@@ -1,15 +1,16 @@
 <?php
 
-/*** 登録画面へのルート ***/
-Route::resource('regist', 'RegistController', ['only' => ['index']]);
+/*
+|--------------------------------------------------------------------------
+| Web Routes
+|--------------------------------------------------------------------------
+|
+| Here is where you can register web routes for your application. These
+| routes are loaded by the RouteServiceProvider within a group which
+| contains the "web" middleware group. Now create something great!
+|
+*/
 
-Route::post('regist', 'RegistController@post');
-
-/*** ログイン画面へのルート ***/
-Route::resource('login', 'LoginController', ['only' => ['index']]);
-
-/*** ログイン後のホーム画面へのルート ***/
-Route::resource('home', 'HomeController', ['only' => ['index']]);
-
-
-?>
+Route::get('/', function () {
+    return view('welcome');
+});
