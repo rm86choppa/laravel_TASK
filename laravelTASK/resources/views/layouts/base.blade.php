@@ -15,6 +15,9 @@
         form dl dt{ width: 165px; padding:10px 0; float:left; clear:both; }
         form dt { text-align:  right; margin-right: 15px; }
         form dl dd{ padding:10px 0; }
+        .nav .user { float: left; margin-right: 5px; }
+        .description {  border: solid 1px rgb(201, 196, 196); }
+        .error { color: red; }
     </style>
 </head>
 <body>
@@ -23,8 +26,7 @@
         <h1>@yield('title')</h1>
         </div>
         <div class="nav">  
-            <a href="#">@yield('link')</a>
-            <a href="#">@yield('link')</a>
+            @yield('nav')
         </div>
     </header>
     <div class="contents">

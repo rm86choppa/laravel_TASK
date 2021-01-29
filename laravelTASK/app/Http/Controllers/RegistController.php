@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Http\Requests\NewRegistrationRequest;
 
 class RegistController extends Controller
 {
@@ -14,6 +15,11 @@ class RegistController extends Controller
     public function index()
     {
         return view('regist');
+    }
+
+    public function post(NewRegistrationRequest $request) {
+        $userInfo = $request->all();
+        return view('home', $userInfo);
     }
 
     
