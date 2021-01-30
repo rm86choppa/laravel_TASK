@@ -17,9 +17,12 @@ class RegistController extends Controller
         return view('regist');
     }
 
-    public function post(NewRegistrationRequest $request) {
-        $userInfo = $request->all();
-        return view('home', $userInfo);
+    /** 
+     * postリソース
+    */
+    public function store(NewRegistrationRequest $request) {
+        $Name = $request->Name;
+        return view('home', compact('Name'));
     }
 
     
