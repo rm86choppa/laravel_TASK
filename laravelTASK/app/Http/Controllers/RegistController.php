@@ -24,6 +24,4 @@ class RegistController extends Controller
         $Name = $request->Name;
         return view('home', compact('Name'));
     }
-
-    
 }
