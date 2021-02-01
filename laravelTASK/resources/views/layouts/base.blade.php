@@ -2,19 +2,9 @@
 <html>
 <head>
     <title>@yield('title')</title>
+    <link rel="stylesheet" href="{{ asset('/css/index.css') }}">
     <style>
-        header { border-bottom: solid 1px rgb(201, 196, 196); }
-        h1 { margin: 0%; }
-        header { line-height: 60px; }
-        .header_title { display: inline-block; }
-        .nav { float: right; margin: 0 20px 0 0; }
-        .contents { width: 500px; margin: 15px 15px 15px 15px; }
-        .contents_title { border: solid 1px rgb(201, 196, 196); background-color: rgb(238, 235, 235); }
-        .contents_title h3 { line-height: 15px; }
-        form{ padding:30px 50px; border: solid 1px rgb(201, 196, 196); }
-        form dl dt{ width: 165px; padding:10px 0; float:left; clear:both; }
-        form dt { text-align:  right; margin-right: 15px; }
-        form dl dd{ padding:10px 0; }
+        
     </style>
 </head>
 <body>
@@ -23,8 +13,7 @@
         <h1>@yield('title')</h1>
         </div>
         <div class="nav">  
-            <a href="#">@yield('link')</a>
-            <a href="#">@yield('link')</a>
+            @yield('nav')
         </div>
     </header>
     <div class="contents">

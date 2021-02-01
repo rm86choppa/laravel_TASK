@@ -4,9 +4,10 @@
 
 @section('title', 'Laravel')
 
-@section('link', 'regist')
-
-@section('link', 'login')
+@section('nav')
+<a href="regist">regist</a>
+<a href="login">login</a>
+@endsection
 
 @section('contents')
 <div class="contents_title">
